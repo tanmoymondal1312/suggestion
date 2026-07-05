@@ -21,13 +21,15 @@
 
     :root {
       --bg: #0B1020;
-      --accent: #00D4FF;
-      --amber: #FFB347;
-      --amber-bright: #FFC870;
-      --text: #E8EDF5;
-      --text-muted: #8A9BB5;
+      --accent: #4DC9E8;
+      --amber: #FFCE73;
+      --amber-bright: #FFDA8F;
+      --yellow-soft: #FFE9B8;
+      --heading: #F5F1E6;
+      --text: #DDE3EE;
+      --text-muted: #93A2BA;
       --card-bg: rgba(255,255,255,0.04);
-      --card-border: rgba(0,212,255,0.12);
+      --card-border: rgba(255,218,143,0.14);
       --wa-green: #25D366;
     }
 
@@ -38,7 +40,7 @@
       color: var(--text);
       font-family: 'Hind Siliguri', sans-serif;
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.75;
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
@@ -101,9 +103,10 @@
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
-      background-size: 32px 32px;
+        radial-gradient(ellipse 60% 40% at 80% 10%, rgba(255,218,143,0.07), transparent 70%),
+        linear-gradient(rgba(0,212,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,255,0.025) 1px, transparent 1px);
+      background-size: 100% 100%, 32px 32px, 32px 32px;
       pointer-events: none;
     }
 
@@ -144,7 +147,7 @@
       font-size: clamp(1.6rem, 6vw, 2.8rem);
       font-weight: 700;
       line-height: 1.35;
-      color: #fff;
+      color: var(--heading);
       margin-bottom: 20px;
     }
 
@@ -159,7 +162,7 @@
     .hero-desc p:last-child { margin-bottom: 0; }
 
     .hero-desc .punch {
-      color: #E8EDF5;
+      color: var(--yellow-soft);
       font-weight: 600;
     }
 
@@ -206,7 +209,7 @@
       padding: 16px 24px;
       border-radius: 14px;
       min-height: 56px;
-      box-shadow: 0 0 28px rgba(0,196,238,0.4), 0 4px 16px rgba(0,0,0,0.3);
+      box-shadow: 0 0 22px rgba(0,196,238,0.28), 0 4px 16px rgba(0,0,0,0.3);
       transition: transform 0.15s ease, box-shadow 0.15s ease;
       position: relative;
       overflow: hidden;
@@ -222,7 +225,7 @@
 
     .btn-primary:hover, .btn-primary:focus {
       transform: translateY(-2px);
-      box-shadow: 0 0 42px rgba(0,196,238,0.55), 0 8px 24px rgba(0,0,0,0.35);
+      box-shadow: 0 0 34px rgba(0,196,238,0.42), 0 8px 24px rgba(0,0,0,0.35);
       outline: none;
     }
 
@@ -241,7 +244,7 @@
     .section-title {
       font-size: clamp(1.2rem, 4vw, 1.55rem);
       font-weight: 700;
-      color: #fff;
+      color: var(--heading);
       margin-bottom: 28px;
       padding-left: 16px;
       position: relative;
@@ -254,7 +257,7 @@
       top: 3px;
       bottom: 3px;
       width: 4px;
-      background: linear-gradient(to bottom, var(--accent), rgba(0,212,255,0.15));
+      background: linear-gradient(to bottom, var(--amber), rgba(77,201,232,0.4));
       border-radius: 2px;
     }
 
@@ -279,16 +282,16 @@
     }
 
     .card:hover {
-      border-color: rgba(0,212,255,0.3);
-      background: rgba(0,212,255,0.04);
+      border-color: rgba(255,218,143,0.32);
+      background: rgba(255,218,143,0.04);
     }
 
     .card-icon {
       width: 44px;
       height: 44px;
       min-width: 44px;
-      background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(0,212,255,0.04));
-      border: 1px solid rgba(0,212,255,0.18);
+      background: linear-gradient(135deg, rgba(255,218,143,0.14), rgba(255,218,143,0.03));
+      border: 1px solid rgba(255,218,143,0.2);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -299,7 +302,7 @@
     .card-title {
       font-size: 1rem;
       font-weight: 700;
-      color: #fff;
+      color: var(--heading);
       margin-bottom: 4px;
       line-height: 1.4;
     }
@@ -329,15 +332,15 @@
       width: 40px;
       height: 40px;
       min-width: 40px;
-      background: linear-gradient(135deg, var(--accent), #0096CC);
+      background: linear-gradient(135deg, #FFCE73, #E8A94D);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
       font-size: 0.95rem;
-      color: #fff;
-      box-shadow: 0 0 18px rgba(0,196,238,0.3);
+      color: #2A1F0A;
+      box-shadow: 0 0 16px rgba(255,206,115,0.25);
     }
 
     .step-text {
@@ -360,13 +363,13 @@
       transition: border-color 0.2s;
     }
 
-    .faq-item.open { border-color: rgba(0,212,255,0.22); }
+    .faq-item.open { border-color: rgba(255,218,143,0.28); }
 
     .faq-q {
       width: 100%;
       background: none;
       border: none;
-      color: #fff;
+      color: var(--heading);
       font-family: 'Hind Siliguri', sans-serif;
       font-size: 0.95rem;
       font-weight: 600;
@@ -387,7 +390,7 @@
       flex-shrink: 0;
       width: 20px;
       height: 20px;
-      color: var(--accent);
+      color: var(--amber);
       transition: transform 0.25s ease;
     }
 
