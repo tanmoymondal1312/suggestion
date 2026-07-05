@@ -9,6 +9,9 @@
   <meta property="og:description" content="প্রতিবছর বোর্ডে সৃজনশীল আসে মাত্র ৪টি অধ্যায় থেকে। সেই ৪টি প্রশ্ন-প্যাটার্ন, ফুল উত্তর আর শর্টকাট — সব এই ৪ পৃষ্ঠায়।">
   <meta property="og:url" content="https://suggestion.mediaghor.com">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://suggestion.mediaghor.com/logo.webp">
+
+  <link rel="icon" type="image/webp" href="/logo.webp">
 
   <title>HSC Physics PDF — ৪ পৃষ্ঠায় ৪টি সৃজনশীল | Mediaghor</title>
 
@@ -62,11 +65,20 @@
     }
 
     .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       font-weight: 700;
       font-size: 1rem;
       color: var(--accent);
       letter-spacing: 0.04em;
       white-space: nowrap;
+    }
+
+    .topbar-logo {
+      height: 30px;
+      width: auto;
+      display: block;
     }
 
     .topbar-countdown {
@@ -558,7 +570,7 @@
 
   <!-- STICKY TOP BAR -->
   <header class="topbar">
-    <div class="topbar-brand">Mediaghor</div>
+    <div class="topbar-brand"><img src="/logo.webp" alt="Mediaghor logo" class="topbar-logo">Mediaghor</div>
     <div class="topbar-countdown">
       <span class="countdown-label">পরীক্ষা শুরু হতে বাকি</span>
       <span class="countdown-timer" id="cd">গণনা...</span>
